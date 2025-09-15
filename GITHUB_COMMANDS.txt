@@ -1,0 +1,7 @@
+# Команды для подключения к GitHub:
+
+git remote add origin https://github.com/[USERNAME]/edem-garden.git
+git branch -M main
+git push -u origin main
+
+# Замени [USERNAME] на свой GitHub username
