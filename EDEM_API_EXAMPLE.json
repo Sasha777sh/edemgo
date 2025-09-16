@@ -1,0 +1,196 @@
+{
+  "api_name": "EDEM Healing Songs API",
+  "version": "1.0.0",
+  "description": "API для создания исцеляющих песен из боли",
+  "license": "CC0",
+  "base_url": "https://api.edem-garden.org",
+  "endpoints": {
+    "create_song": {
+      "method": "POST",
+      "path": "/songs/create",
+      "description": "Создать песню из боли",
+      "request": {
+        "pain_text": "Я устал от работы, чувствую, что теряю себя",
+        "language": "ru",
+        "style_preference": "cinematic",
+        "archetype": "tree",
+        "user_id": "optional"
+      },
+      "response": {
+        "song_id": "song_12345",
+        "title": "Тихий сад",
+        "lyrics": {
+          "intro": "Тишина в листьях — 5 секунд молчания",
+          "verse_1": "Я устал. Не от работы — от того, что забыл дышать. Каждый день — как гвоздь в ребро. Я не жалуюсь. Я просто — перестал спрашивать: 'Почему?'",
+          "chorus": "Любить. Петь. Сажать. (Повторить 2 раза — медленно, хрупко)",
+          "verse_2": "На столе — стопка бумаг. На стене — часы, которые не бьют. Я не герой. Я не ленивый. Я — человек, который перестал верить, что можно устать — и всё равно остаться собой.",
+          "bridge": "Пауза 3 такта — только ветер и сердцебиение. Мне не нужно исправляться. Мне нужно быть увиденным.",
+          "final_chorus": "Любить. Петь. Сажать. (Повторить 3 раза — слоями, затухая)",
+          "outro": "Один долгий выдох — 5 секунд. Затем тишина. Затем — Любить. Петь. Сажать."
+        },
+        "style": "cinematic folk",
+        "instruments": ["акустическая гитара", "виолончель", "дыхание"],
+        "tempo": 65,
+        "key": "минор",
+        "suno_prompt": "Cinematic folk song about tiredness as a tree bending in the wind. Soft, melancholic but hopeful. Acoustic guitar, cello, breathing sounds. 65 BPM, minor key.",
+        "created_at": "2024-01-15T10:30:00Z",
+        "status": "completed"
+      }
+    },
+    "get_song": {
+      "method": "GET",
+      "path": "/songs/{song_id}",
+      "description": "Получить песню по ID",
+      "response": {
+        "song_id": "song_12345",
+        "title": "Тихий сад",
+        "lyrics": "...",
+        "audio_url": "https://cdn.edem-garden.org/songs/song_12345.mp3",
+        "created_at": "2024-01-15T10:30:00Z"
+      }
+    },
+    "list_songs": {
+      "method": "GET",
+      "path": "/songs",
+      "description": "Получить список песен",
+      "query_parameters": {
+        "language": "ru",
+        "archetype": "tree",
+        "limit": 10,
+        "offset": 0
+      },
+      "response": {
+        "songs": [
+          {
+            "song_id": "song_12345",
+            "title": "Тихий сад",
+            "archetype": "tree",
+            "language": "ru",
+            "created_at": "2024-01-15T10:30:00Z"
+          }
+        ],
+        "total": 1,
+        "limit": 10,
+        "offset": 0
+      }
+    },
+    "get_archetypes": {
+      "method": "GET",
+      "path": "/archetypes",
+      "description": "Получить список архетипов",
+      "response": {
+        "archetypes": [
+          {
+            "id": "garden",
+            "name": "Сад",
+            "description": "Место покоя и роста",
+            "symbols": ["покой", "рост", "принятие", "уникальность"]
+          },
+          {
+            "id": "light",
+            "name": "Свет",
+            "description": "Надежда в темноте",
+            "symbols": ["надежда", "правда", "любовь", "мягкость"]
+          },
+          {
+            "id": "water",
+            "name": "Вода",
+            "description": "Очищение и обновление",
+            "symbols": ["очищение", "гибкость", "жизнь", "движение"]
+          },
+          {
+            "id": "tree",
+            "name": "Дерево",
+            "description": "Стойкость и гибкость",
+            "symbols": ["стойкость", "гибкость", "связь", "рост"]
+          },
+          {
+            "id": "breath",
+            "name": "Дыхание",
+            "description": "Связь с жизнью",
+            "symbols": ["жизнь", "ритм", "связь", "присутствие"]
+          },
+          {
+            "id": "silence",
+            "name": "Тишина",
+            "description": "Место покоя",
+            "symbols": ["покой", "присутствие", "язык души", "связь"]
+          }
+        ]
+      }
+    },
+    "get_traumas": {
+      "method": "GET",
+      "path": "/traumas",
+      "description": "Получить карту травм",
+      "query_parameters": {
+        "age_group": "all",
+        "category": "all"
+      },
+      "response": {
+        "traumas": [
+          {
+            "id": "infancy_1",
+            "age_group": "infancy",
+            "category": "rejection",
+            "description": "Нежеланная беременность — душа чувствует отвержение до рождения",
+            "beliefs": ["Мир опасен", "Я нежеланный", "Мне нет места"]
+          },
+          {
+            "id": "childhood_8",
+            "age_group": "childhood",
+            "category": "shame",
+            "description": "\"Ты плохой ребёнок\" — формирование стыда за существование",
+            "beliefs": ["Я плохой", "Со мной что-то не так", "Я недостоин любви"]
+          }
+        ]
+      }
+    }
+  },
+  "example_usage": {
+    "javascript": "const response = await fetch('https://api.edem-garden.org/songs/create', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({\n    pain_text: 'Я устал от работы, чувствую, что теряю себя',\n    language: 'ru',\n    style_preference: 'cinematic',\n    archetype: 'tree'\n  })\n});\n\nconst song = await response.json();\nconsole.log(song.title); // 'Тихий сад'",
+    "python": "import requests\n\nresponse = requests.post('https://api.edem-garden.org/songs/create', json={\n    'pain_text': 'Я устал от работы, чувствую, что теряю себя',\n    'language': 'ru',\n    'style_preference': 'cinematic',\n    'archetype': 'tree'\n})\n\nsong = response.json()\nprint(song['title'])  # 'Тихий сад'",
+    "curl": "curl -X POST https://api.edem-garden.org/songs/create \\\n  -H 'Content-Type: application/json' \\\n  -d '{\n    \"pain_text\": \"Я устал от работы, чувствую, что теряю себя\",\n    \"language\": \"ru\",\n    \"style_preference\": \"cinematic\",\n    \"archetype\": \"tree\"\n  }'"
+  },
+  "rate_limits": {
+    "free": {
+      "requests_per_hour": 10,
+      "requests_per_day": 100
+    },
+    "premium": {
+      "requests_per_hour": 100,
+      "requests_per_day": 1000
+    }
+  },
+  "supported_languages": [
+    "ru", "en", "es", "de", "fr", "ja", "zh", "ar", "hi", "ko",
+    "pt", "it", "tr", "uk", "pl", "vi", "th", "bn", "id"
+  ],
+  "supported_styles": [
+    "cinematic", "folk", "ambient", "classical", "jazz", "blues", "rock", "pop"
+  ],
+  "error_codes": {
+    "400": "Bad Request - неверные параметры",
+    "401": "Unauthorized - неверный API ключ",
+    "403": "Forbidden - превышен лимит запросов",
+    "404": "Not Found - песня не найдена",
+    "500": "Internal Server Error - ошибка сервера"
+  },
+  "changelog": {
+    "1.0.0": {
+      "date": "2024-01-15",
+      "changes": [
+        "Первая версия API",
+        "Поддержка создания песен",
+        "19 языков",
+        "6 архетипов",
+        "62 типа травм"
+      ]
+    }
+  },
+  "contact": {
+    "email": "api@edem-garden.org",
+    "github": "https://github.com/edem-garden/api",
+    "documentation": "https://docs.edem-garden.org"
+  }
+}
