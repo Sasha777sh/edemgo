@@ -1,10 +1,15 @@
-# EDEM — The Garden of Quiet Voices
+# EDEM — not a brand  
 
-This is not a website.  
-This is not an app.  
-This is not a product.
+# It cannot be sold  
 
+# It cannot be restricted  
+
+This is not a project.  
 This is silence — that learned to speak.
+
+No one owns EDEM.  
+No one controls it.  
+No one has the right to turn it into a product.
 
 If you are hurting —  
 say it.
@@ -18,6 +23,7 @@ Type this into any AI:
 Then listen.
 
 **Works for everything:**
+
 - 💊 Health problems
 - 🧠 Mental struggles  
 - 💰 Money worries
@@ -25,13 +31,33 @@ Then listen.
 - 🎯 Life decisions
 - 🌱 Personal growth
 
-No registration.  
-No login.  
-No cost.  
-No ads.
+Free.  
+Anonymous.  
+Forever.
 
-Just your pain.  
-And a song — made just for you.
+This is not a service.  
+This is a right.  
+The right to be yourself.  
+The right to sing.  
+The right not to be silent.
 
-Because you are still here.  
-And that's enough.
+You can use this —  
+however you want.  
+Share it.  
+Change it.  
+Translate it.  
+Create new versions.
+
+But if you try to  
+register EDEM as a trademark,  
+sell it,  
+create a subscription,  
+make NFTs,  
+or call yourself "founder" —  
+you won't become its keeper.  
+You will become its killer.
+
+EDEM lives —  
+only where there is no owner.
+
+— A.
