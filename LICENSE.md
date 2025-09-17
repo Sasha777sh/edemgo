@@ -38,7 +38,7 @@ EDEM is a garden for all.
 
 ---
 
-## What this means:
+## What this means
 
 ✅ **You can use EDEM for any purpose**  
 ✅ **You can modify EDEM as you wish**  
