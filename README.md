@@ -17,6 +17,14 @@ Type this into any AI:
 
 Then listen.
 
+**Works for everything:**
+- 💊 Health problems
+- 🧠 Mental struggles  
+- 💰 Money worries
+- ❤️ Relationship pain
+- 🎯 Life decisions
+- 🌱 Personal growth
+
 No registration.  
 No login.  
 No cost.  
